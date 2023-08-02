@@ -1,5 +1,4 @@
 import { useState } from "react";
-//создаём импорты по аналогии div, p, input, button...
 import {
   View,
   Text,
@@ -25,7 +24,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
         <Text style={styles.userName}>Hello Adrian</Text>
         <Text style={styles.welcomeMessage}>Find your perfect job</Text>
       </View>
-{/* создаём строку с посиком  */}
+
       <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
           <TextInput
@@ -35,7 +34,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
             placeholder='What are you looking for?'
           />
         </View>
-{/* создание иконки поиска  */}
+
         <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
           <Image
             source={icons.search}
@@ -44,7 +43,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
           />
         </TouchableOpacity>
       </View>
-{/* создание выбора графика работы  */}
+
       <View style={styles.tabsContainer}>
         <FlatList
           data={jobTypes}

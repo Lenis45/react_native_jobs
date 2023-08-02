@@ -13,7 +13,6 @@ import { COLORS, SIZES } from "../../../constants";
 import PopularJobCard from "../../common/cards/popular/PopularJobCard";
 import useFetch from "../../../hook/useFetch";
 
-//using useFetch by create list of vacations
 const Popularjobs = () => {
   const router = useRouter();
   const { data, isLoading, error } = useFetch("search", {
@@ -27,7 +26,7 @@ const Popularjobs = () => {
     router.push(`/job-details/${item.job_id}`);
     setSelectedJob(item.job_id);
   };
-// creating popularjobs sections 
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>

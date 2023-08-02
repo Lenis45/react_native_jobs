@@ -3,7 +3,6 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import styles from "./popularjobcard.style";
 import { checkImageURL } from "../../../../utils";
 
-//creating popularjobcard section 
 const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
   return (
     <TouchableOpacity
@@ -11,7 +10,6 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
       onPress={() => handleCardPress(item)}
     >
       <TouchableOpacity style={styles.logoContainer(selectedJob, item)}>
-        {/* search image about compony */}
         <Image
           source={{
             uri: checkImageURL(item?.employer_logo)
@@ -25,7 +23,7 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
       <Text style={styles.companyName} numberOfLines={1}>
         {item.employer_name}
       </Text>
-  {/* creating infoContainer  */}
+
       <View style={styles.infoContainer}>
         <Text style={styles.jobName(selectedJob, item)} numberOfLines={1}>
           {item.job_title}
